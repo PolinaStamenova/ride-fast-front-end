@@ -58,7 +58,6 @@ ul {
 }
 
 .button-signout {
-  display: block;
   padding: 0.3rem;
   border: 1px solid #97bf11;
   border-radius: 4px;
@@ -70,10 +69,12 @@ ul {
 }
 
 .button-icon {
+  display: block;
   background: none;
   border: none;
   cursor: pointer;
   margin-right: 2rem;
+  padding-left: 0;
 }
 
 .fa-times,
@@ -154,13 +155,18 @@ footer {
     display: block;
   }
 
-  .button-signout {
+  .button-icon {
     display: none;
+    margin-left: 0.5rem;
   }
 
   footer {
     left: 0%;
     right: 81%;
+  }
+
+  .nav-icons-holder {
+    justify-content: space-around;
   }
 
   .nav-mobile-border {

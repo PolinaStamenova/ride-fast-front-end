@@ -20,7 +20,7 @@ const Nav = () => {
           <img src={logo} alt="Logo" className="logo" />
           <div className="nav-btn-holder">
             <button className="button-signout" type="submit">
-              Sign out
+              Log out
             </button>
             <button
               className="button-icon"
