@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import logo from '../logo.png';
-
 import './Nav.css';
 
-const Nav = () => {
+const Nav = ({ handleLogOut }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ const Nav = () => {
         >
           <img src={logo} alt="Logo" className="logo" />
           <div className="nav-btn-holder">
-            <button className="button-signout" type="submit">
+            <button className="button-signout" type="submit" onClick={handleLogOut}>
               Log out
             </button>
             <button
@@ -111,6 +111,10 @@ const Nav = () => {
       </footer>
     </div>
   );
+};
+
+Nav.propTypes = {
+  handleLogOut: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Nav;
