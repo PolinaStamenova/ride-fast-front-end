@@ -1,0 +1,156 @@
+.reg {
+  color: #fff;
+  background-color: #34495e;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+  padding: 20px 0;
+}
+
+.reg-form-title {
+  font-weight: 500;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.baar {
+  width: 55%;
+  height: 1px;
+  background-color: #fff;
+}
+
+.description {
+  line-height: 35px;
+  width: 75%;
+  text-align: center;
+  margin: 0 40px;
+  padding: 20px 0;
+}
+
+.select-book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.select-city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.reserve-date {
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.reserve-date input {
+  padding-left: 15px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.reserve-date:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #34495e;
+}
+
+.reserve-date input:hover {
+  color: #34495e;
+}
+
+.select-city select {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #34495e;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 0 3px;
+  cursor: pointer;
+}
+
+.select-city select:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #34495e;
+}
+
+.book-btn {
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #34495e;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.book-btn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #fff;
+  color: #34495e;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.book-btn button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #34495e;
+}
+
+.hamburger {
+  font-size: 40px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 10px;
+  align-items: center;
+  background-color: #fff;
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+}
+
+.reserve-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+  padding: 20px 0;
+}
