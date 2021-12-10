@@ -1,4 +1,4 @@
-const ADD_CAR = "ADD_CAR";
+const ADD_CAR = 'ADD_CAR';
 
 export const addCar = (payload) => ({
   type: ADD_CAR,
