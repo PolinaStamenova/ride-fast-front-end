@@ -1,6 +1,6 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .contents {
@@ -21,7 +21,7 @@
   width: auto;
 }
 
-#previousButtonContainer, 
+#previousButtonContainer,
 #nextButtonContainer {
   display: inline-block;
   width: 75px;
@@ -72,6 +72,7 @@
     width: calc(100vw - 200px);
     display: inline-flex;
   }
+
   .contents {
     display: flex;
   }
@@ -82,15 +83,19 @@
 .fsize-3 {
   font-size: 3px;
 }
+
 .fsize-5 {
   font-size: 5px;
 }
+
 .fsize-12 {
   font-size: 12px;
 }
+
 .fsize-15 {
   font-size: 15px;
 }
+
 .fsize-25 {
   font-size: 25px;
 }
