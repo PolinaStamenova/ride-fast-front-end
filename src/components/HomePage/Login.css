@@ -1,8 +1,5 @@
-form {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.562);
-}
-
 .box {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.562);
   font-family: sans-serif;
   width: 300px;
   border-radius: 10px;
@@ -22,9 +19,9 @@ form {
   font-size: 23px;
 }
 
-.box input[type='text'],
-.box input[type='password'],
-.box input[type='email'] {
+.box input[type="text"],
+.box input[type="password"],
+.box input[type="email"] {
   background: none;
   display: block;
   margin: 20px auto;
@@ -48,18 +45,18 @@ form {
   transition: 0.25s;
 }
 
-.box input[type='text']:focus,
-.box input[type='password'] {
+.box input[type="text"]:focus,
+.box input[type="password"] {
   width: 280px;
   border-color: #2ecc71;
 }
 
-.box input[type='email']:focus {
+.box input[type="email"]:focus {
   width: 280px;
   border-color: #2ecc71;
 }
 
-.box input[type='submit'] {
+.box input[type="submit"] {
   background: none;
   display: block;
   margin: 20px auto;
@@ -72,7 +69,7 @@ form {
   transition: 0.25s;
 }
 
-.box input[type='submit']:hover {
+.box input[type="submit"]:hover {
   background: #2ecc71;
 }
 
