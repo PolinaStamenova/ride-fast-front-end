@@ -11,10 +11,31 @@ const AddItem = () => {
   const [price, setPrice] = useState("");
   const [duration, setDuration] = useState("");
 
+  const submitCarToStore = (e) => {
+    e.preventDefault();
+
+    const car = {
+      id: uuidv4(),
+      name,
+      image,
+      description,
+      number_of_seats,
+      duration,
+      price,
+    };
+    createCar(car);
+    setName("");
+    setImage("");
+    setDescription("");
+    setNumberOfSeats("");
+    setDuration("");
+    setPrice("");
+  };
+
   return (
     <div className='add-form'>
       <h1>ADD NEW CAR</h1>
-      <form>
+      <form onSubmit={submitCarToStore} className='add-item-form'>
         <input
           className='add-item-input'
           value={name}
