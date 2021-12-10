@@ -63,8 +63,8 @@ function HomePage() {
     <div className="contents">
       <Nav handleLogOut={handleLogOut} />
       <div className="homepage">
-        <h2 className="header-text">LATEST MODELS</h2>
-        <h4 className="text-muted fsize-15 mb-5">Please Select A Model</h4>
+        <h2 className="header-text">LATEST CARS</h2>
+        <h4 className="text-muted fsize-15 mb-5">Please Select A Car</h4>
         <div className="d-flex fsize-5 mb-4 text-muted">
           <i className="fa fa-circle me-1" />
           <i className="fa fa-circle me-1" />
