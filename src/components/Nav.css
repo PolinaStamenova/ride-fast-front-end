@@ -35,7 +35,8 @@ ul {
 
 .navigation-panel {
   width: 100vw;
-  height: 100vh;
+
+  /* height: 100vh; */
   padding: 0;
   border: 1px solid #cacac8;
   background-color: rgba(255, 255, 255, 0.5);
@@ -111,10 +112,13 @@ nav {
 /* -----------------  FOOTER - START -------------------- */
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  left: 22%;
-  right: 22%;
+
+  /* left: 22%; */
+
+  /* right: 22%; */
+  width: 100%;
 }
 
 .footer-ul {
@@ -122,6 +126,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  margin: auto;
 }
 
 /* -----------------  FOOTER - END -------------------- */
@@ -141,7 +146,9 @@ footer {
 
   .navigation-panel {
     width: 200px;
-    padding: 1rem 0 1rem 1rem;
+
+    /* padding: 1rem 0 1rem 1rem; */
+    height: 100vh;
     background-color: rgba(255, 255, 255, 1);
   }
 
@@ -162,6 +169,7 @@ footer {
   footer {
     left: 0%;
     right: 81%;
+    width: max-content;
   }
 
   .nav-icons-holder {
