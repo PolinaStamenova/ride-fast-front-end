@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 25px;
-  padding: 0px;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -66,8 +66,8 @@
     padding-right: 20px;
     color: white;
     background-color: rgb(72, 167, 28);
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 
