@@ -8,7 +8,10 @@ const Nav = ({ handleLogOut }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   return (
-    <div className="navigation-panel">
+    <div className={
+      `navigation-panel ${isMobile ? 'vh-100' : ''}`
+    }
+    >
       <header>
         <div
           className={

@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import './Login.css';
+import './HomePage.css';
 import React, { useEffect, useRef } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -59,7 +60,7 @@ function HomePage() {
     mainDiv.current.scrollBy((mainDiv.current.childNodes[0].offsetWidth * -1), 0);
   };
   return (
-    <div>
+    <div className="contents">
       <Nav handleLogOut={handleLogOut} />
       <div className="homepage">
         <h2 className="header-text">LATEST MODELS</h2>
