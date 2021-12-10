@@ -19,8 +19,16 @@ function HomePage() {
     dispatch(logoutUser(history));
     history('/login');
   };
+  const goToDetailsPage = (carId) => {
+    history('/details', { state: { carId } });
+  };
   const cars = carArray.map((car) => (
-    <Col key={car.id} sm={12} md={4}>
+    <Col
+      key={car.id}
+      sm={12}
+      md={4}
+      onClick={() => goToDetailsPage(car.id)}
+    >
       <div className="d-flex flex-column justify-content-center align-items-center">
         <img src={car.image} alt="" className="car-img" />
         <h5 className="mt-3 fsize-15">{car.name.toUpperCase()}</h5>
