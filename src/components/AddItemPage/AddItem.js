@@ -1,6 +1,26 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
+import { addCar } from "../../redux/cars/cars";
 const AddItem = () => {
+  const dispatch = useDispatch();
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("");
+  const [description, setDescription] = useState("");
+  const [number_of_seats, setNumberOfSeats] = useState("");
+  const [price, setPrice] = useState("");
+  const [duration, setDuration] = useState("");
+  const createCar = (car) => {
+    axios
+      .post("https://ridefast.herokuapp.com/api/v1/cars", car)
+      .then((res) => {
+        if (res.status === 201) {
+          dispatch(addCar(car));
+        }
+      })
+      .catch((error) => error);
+  };
   const submitCarToStore = (e) => {
     e.preventDefault();
 
