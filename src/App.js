@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import Login from './components/HomePage/Login';
 import SignUp from './components/HomePage/SignUp';
 import HomePage from './components/HomePage/HomePage';
+import Details from './components/HomePage/Details';
 import 'react-toastify/dist/ReactToastify.css';
 
 // After adding the proper routes -> please, remove line 1 and this comment.
@@ -17,7 +18,7 @@ const App = () => (
         <Route path="/login" exact element={<Login />} />
         <Route exact path="/" element={<HomePage />} />
         <Route path="/cars" exact element={<HomePage />} />
-        {/* <Route exact path='/main' element={<Main />} /> */}
+        <Route exact path="/details" element={<Details />} />
         {/* <Route exact path='/myreservations' element={<MyReservations />} /> */}
         {/* <Route exact path='/addItem' element={<AddItem />} /> */}
         {/* <Route exact path='/deleteItem' element={<DeleteItem />} /> */}
