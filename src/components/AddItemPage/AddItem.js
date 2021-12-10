@@ -1,7 +1,9 @@
+/* eslint-disable camelcase */
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { addCar } from "../../redux/cars/cars";
 const AddItem = () => {
   const dispatch = useDispatch();
@@ -11,6 +13,7 @@ const AddItem = () => {
   const [number_of_seats, setNumberOfSeats] = useState("");
   const [price, setPrice] = useState("");
   const [duration, setDuration] = useState("");
+  const history = useNavigate();
   const createCar = (car) => {
     axios
       .post("https://ridefast.herokuapp.com/api/v1/cars", car)
@@ -40,6 +43,7 @@ const AddItem = () => {
     setNumberOfSeats("");
     setDuration("");
     setPrice("");
+    history("/");
   };
   return (
     <div className='add-form'>
