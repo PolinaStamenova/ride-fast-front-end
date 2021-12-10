@@ -4,10 +4,13 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { addCar } from '../../redux/cars/cars';
+import './AddItem.css';
 
 const AddItem = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
   const [description, setDescription] = useState('');
@@ -45,6 +48,7 @@ const AddItem = () => {
     setNumberOfSeats('');
     setDuration('');
     setPrice('');
+    navigate('/');
   };
 
   return (
