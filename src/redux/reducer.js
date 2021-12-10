@@ -1,9 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import auth from './slices/auth';
-import cars from './slices/cars';
+import cars from './cars/cars';
 
 const reducer = combineReducers({
-  auth, cars,
+  auth,
+  cars,
 });
 
 export default reducer;

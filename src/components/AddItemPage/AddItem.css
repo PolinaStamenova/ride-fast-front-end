@@ -1,0 +1,79 @@
+/*
+  ==============================================
+               ****** RESET *****
+  ==============================================
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  ==============================================
+               ****** GLOBAL *****
+  ==============================================
+*/
+
+.add-form {
+  padding-top: 20vh;
+  background-color: #97bf11;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+}
+
+.add-item-form {
+  margin-top: 4rem;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.add-item-input,
+.add-item-btn {
+  color: #fff;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  font-size: 14px;
+}
+
+.add-item-btn:hover {
+  color: #000;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 1px solid #fff;
+}
+
+.add-item-input:focus {
+  outline: none;
+}
+
+.add-item-input::placeholder {
+  color: #fff;
+}
+
+/*
+    ===============================================================
+      ****** NAVIGATION PANEL - MEDIA QUERY min-width 768px *****
+    ===============================================================
+*/
+
+@media only screen and (min-width: 768px) {
+  .add-item-form {
+    padding: 0 700px;
+  }
+
+  .add-item-input,
+  .add-item-btn {
+    padding: 0.7rem;
+    font-size: 20px;
+  }
+}
