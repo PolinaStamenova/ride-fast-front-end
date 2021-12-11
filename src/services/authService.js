@@ -10,7 +10,7 @@ export const createUser = (user) => async (dispatch) => {
   try {
     const response = await createUserAsynch(user);
     dispatch(setUser(response.data));
-    updateToken(response.data);
+    updateToken(response.data.data);
     toast.success('User created successfully');
     return response.data;
   } catch (error) {
@@ -25,7 +25,7 @@ export const loginUser = (user) => async (dispatch) => {
   try {
     const response = await loginUserAsynch(user);
     dispatch(setUser(response.data));
-    updateToken(response.data);
+    updateToken(response.data.data);
     toast.success('Welcome to ride fast ');
     return response.data;
   } catch (error) {
