@@ -7,6 +7,7 @@ import SignUp from './components/HomePage/SignUp';
 import HomePage from './components/HomePage/HomePage';
 import AddItem from './components/AddItem/AddItem';
 import 'react-toastify/dist/ReactToastify.css';
+import Reservation from './components/Reservation/Reservation';
 
 // After adding the proper routes -> please, remove line 1 and this comment.
 const App = () => (
@@ -22,7 +23,7 @@ const App = () => (
         {/* <Route exact path='/myreservations' element={<MyReservations />} /> */}
         <Route exact path="/addItem" element={<AddItem />} />
         {/* <Route exact path='/deleteItem' element={<DeleteItem />} /> */}
-        {/* <Route exact path='/reserve' element={<ReserveItem />} /> */}
+        <Route exact path="/reserve" element={<Reservation />} />
       </Routes>
     </Router>
   </div>

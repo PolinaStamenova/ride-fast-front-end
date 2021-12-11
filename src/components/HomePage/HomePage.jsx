@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import { useDispatch, useSelector } from 'react-redux';
 import './Login.css';
 import './HomePage.css';
@@ -6,15 +7,14 @@ import { Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import storage from '../../services/storageService';
 import { logoutUser } from '../../services/authService';
-import { carsSelector } from '../../redux/slices/cars';
+import { carsSelector, fetchCarsDataAsync } from '../../redux/slices/cars';
 import Nav from '../Nav';
-// import Reservation from '../Reservation/Reservation';
 
 function HomePage() {
   const history = useNavigate();
   const dispatch = useDispatch();
   const mainDiv = useRef();
-  const carArray = useSelector(carsSelector);
+  const carArray = useSelector((state) => carsSelector(state));
   const handleLogOut = () => {
     dispatch(logoutUser(history));
     history('/login');
@@ -52,13 +52,15 @@ function HomePage() {
     if (!token) {
       history('/login');
     }
+    dispatch(fetchCarsDataAsync());
   }, [history]);
   const scrollRight = () => {
     mainDiv.current.scrollBy(mainDiv.current.childNodes[0].offsetWidth, 0);
   };
   const scrollLeft = () => {
-    mainDiv.current.scrollBy((mainDiv.current.childNodes[0].offsetWidth * -1), 0);
+    mainDiv.current.scrollBy(mainDiv.current.childNodes[0].offsetWidth * -1, 0);
   };
+
   return (
     <div className="contents">
       <Nav handleLogOut={handleLogOut} />
@@ -80,9 +82,7 @@ function HomePage() {
           <i className="fa fa-circle me-1" />
         </div>
         <div className="mt-4 w-100 d-flex justify-content-between align-items-center">
-          <div
-            id="previousButtonContainer"
-          >
+          <div id="previousButtonContainer">
             <div
               onClick={scrollLeft}
               onKeyPress={scrollLeft}
