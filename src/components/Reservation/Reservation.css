@@ -1,16 +1,17 @@
 .reg {
   color: #fff;
-  background-color: #34495e;
+  background-color: #97bf11;
   height: 100vh;
 }
 
-.container {
+.containerr {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #97bf11;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .header {
@@ -42,8 +43,8 @@
 }
 
 .select-book {
-  display: flex;
   justify-content: space-between;
+  box-shadow: 0 0 10px rgb(0 0 0 / 56%);
   align-items: center;
   flex-direction: column;
   padding: 20px 10px;
@@ -58,46 +59,56 @@
   border-radius: 10px;
 }
 
-.reserve-date {
-  border: 1px solid #ccc;
+.reserve-wrapper {
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 130px;
-  height: 40px;
-  border-radius: 20px;
-  margin-right: 20px;
+  padding: 20px 10px;
+}
+
+.reserve-date label {
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .reserve-date input {
-  padding-left: 15px;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: transparent;
   outline: none;
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #97bf11;
+  padding: 0 10px;
 }
 
-.reserve-date:hover {
-  cursor: pointer;
-  background-color: #fff;
-  color: #34495e;
-}
-
-.reserve-date input:hover {
-  color: #34495e;
+.select-and-book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
 }
 
 .select-city select {
   border: 1px solid #ccc;
   border-radius: 20px;
-  background-color: #34495e;
+  background-color: #97bf11;
   color: #fff;
   width: 100%;
   height: 100%;
   padding: 0 3px;
   cursor: pointer;
+  transition: 0.25s;
+}
+
+.book-btn button {
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #97bf11;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.25s;
 }
 
 .select-city select:hover {
@@ -106,30 +117,10 @@
   color: #34495e;
 }
 
-.book-btn {
-  width: 130px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: #34495e;
-  color: #fff;
-  margin: 0 10px;
-}
-
-.book-btn button {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: #fff;
-  color: #34495e;
-  font-size: 15px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
 .book-btn button:hover {
   color: #fff;
   border: 1px solid #fff;
-  background-color: #34495e;
+  background-color: #97bf11;
 }
 
 .hamburger {
@@ -147,10 +138,24 @@
   height: 50px;
 }
 
-.reserve-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 40px;
-  padding: 20px 0;
+@media only screen and (max-width: 768px) {
+  .containerr {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .reg-form-title {
+    font-size: 19px;
+    padding-bottom: 10px;
+  }
+
+  .description {
+    line-height: 30px;
+    width: 75%;
+    text-align: center;
+    margin: 0 30px;
+    font-size: 17px;
+  }
 }
