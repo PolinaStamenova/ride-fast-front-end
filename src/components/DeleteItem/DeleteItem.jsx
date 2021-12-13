@@ -2,13 +2,11 @@
  quotes, no-unused-vars, react/self-closing-comp, react/jsx-closing-tag-location */
 
 import React, { useEffect, useState } from "react";
-// import { FaSearch } from "react-icons/fa";
 import { HiMenuAlt4 } from "react-icons/hi";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getCars } from "../../services/carsService";
-import storage from "../../services/storageService";
 import { removeCar } from "../../redux/cars/cars";
 import "./DeleteItem.css";
 
@@ -16,7 +14,6 @@ export default function DeleteItem() {
   const history = useNavigate();
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.entities.reservation);
-  // const currentUser = storage.getAuthToken();
   const { list: cars } = useSelector((state) => state.entities.carrs);
   const [id, setId] = useState();
 
