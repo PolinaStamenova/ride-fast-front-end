@@ -8,10 +8,7 @@ const Nav = ({ handleLogOut }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   return (
-    <div className={
-      `navigation-panel ${isMobile ? 'vh-100' : ''}`
-    }
-    >
+    <div className={`navigation-panel ${isMobile ? 'vh-100' : ''}`}>
       <header>
         <div
           className={
@@ -22,7 +19,11 @@ const Nav = ({ handleLogOut }) => {
         >
           <img src={logo} alt="Logo" className="logo" />
           <div className="nav-btn-holder">
-            <button className="button-signout" type="submit" onClick={handleLogOut}>
+            <button
+              className="button-signout"
+              type="submit"
+              onClick={handleLogOut}
+            >
               Log out
             </button>
             <button
@@ -63,7 +64,7 @@ const Nav = ({ handleLogOut }) => {
           </li>
           <li className="nav-list">
             <Link className="nav-link link-style" to="/deleteItem">
-              Delete car
+              Remove car
             </Link>
           </li>
         </ul>
