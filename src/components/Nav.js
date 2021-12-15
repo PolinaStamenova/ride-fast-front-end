@@ -52,7 +52,7 @@ const Nav = ({ handleLogOut }) => {
             </Link>
           </li>
           <li className="nav-list">
-            <Link className="nav-link link-style" to="/myreseravtions">
+            <Link className="nav-link link-style" to="/myreservations">
               My reservations
             </Link>
           </li>
