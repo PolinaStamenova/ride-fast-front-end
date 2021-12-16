@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Ride Fast - Final capstone project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This project is the Final Capstone Project in Microverse and is based on an app to reserve a car.
 
-## Available Scripts
+![Screenshot](src/screenshot.png)
 
-In the project directory, you can run:
+## Project Decription
 
-### `yarn start`
+- Ride fast is built in two different apps with React and Redux for the front end and Ruby on Rails for the backend API. To use the app, a user logs in and is given access to the available cars. They have the options to add, delete and reserve a car.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Back End
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Api Documentation](https://ridefast.herokuapp.com/api-docs/index.html)
 
-### `yarn test`
+[Back End project](https://github.com/PolinaStamenova/ride-fast-back-end)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `yarn build`
+- `React`
+- `Redux`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get a local copy up and running follow these simple example steps.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instructions
 
-### `yarn eject`
+* Clone this repo with:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    ```bash
+    git clone https://github.com/PolinaStamenova/ride-fast-front-end.git
+    ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Navigate to the folder/directory
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    ```bash
+    cd ride-fast-front-end
+    ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Install
 
-## Learn More
+```sh
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm start
+```
 
-### Code Splitting
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👤 **Gift Uwhubetine**
 
-### Analyzing the Bundle Size
+- GitHub: [@githubhandle](https://github.com/Ghiftee)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/giftuwhubetine)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+👤 **Aganze Mataba Henri**
 
-### Making a Progressive Web App
+- GitHub: [@githubhandle](https://github.com/hiromataba)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hiro-mataba-1bb910209/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+👤 **Polina Stamenova**
 
-### Advanced Configuration
+- GitHub: [@githubhandle](https://github.com/PolinaStamenova)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/polina-stamenova-a60766112/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+👤 **Victor Otieno**
 
-### Deployment
+- GitHub: [@githubhandle](https://github.com/vikitaotiz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/victor-otieno-oluoch/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing
 
-### `yarn build` fails to minify
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to check the [issues page](https://github.com/PolinaStamenova/ride-fast-front-end/issues).
+
+## Show your support
+
+Give a `⭐️` if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- Original design by Murat Korkmaz on Behance
