@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable import/prefer-default-export */
 import { createSlice } from '@reduxjs/toolkit';
 
 const reservation = createSlice({
@@ -29,6 +28,9 @@ const reservation = createSlice({
 });
 
 export const {
-  reservationRequest, setReservation, reservationFailure, reservationCreated,
+  reservationRequest,
+  setReservation,
+  reservationFailure,
+  reservationCreated,
 } = reservation.actions;
 export default reservation.reducer;
