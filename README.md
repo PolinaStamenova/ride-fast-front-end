@@ -4,7 +4,7 @@
 
 ![Screenshot](src/screenshot.png)
 
-![Live Link](https://ride-fast-app.netlify.app/)
+[Live Link](https://ride-fast-app.netlify.app/)
 
 ## Project Decription
 
