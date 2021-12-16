@@ -1,10 +1,14 @@
+![](https://camo.githubusercontent.com/8a4ae3fb98faf74ddf78a6677ceaa6e8872f7f340f569b7c5e1aa9bcc4061d95/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6963726f76657273652d626c756576696f6c6574)
+
 # Ride Fast - Final capstone project
 
 - This project is the Final Capstone Project in Microverse and is based on an app to reserve a car.
 
 ![Screenshot](src/screenshot.png)
 
-[Live Link](https://ride-fast-app.netlify.app/)
+## App Live link
+
+[Netlify](https://ride-fast-app.netlify.app/)
 
 ## Project Decription
 
@@ -14,7 +18,12 @@
 
 [Api Documentation](https://ridefast.herokuapp.com/api-docs/index.html)
 
-[Back End project](https://github.com/PolinaStamenova/ride-fast-back-end)
+[Back end project](https://github.com/PolinaStamenova/ride-fast-back-end)
+
+## Kanban board
+- [Kanban board link](https://github.com/PolinaStamenova/ride-fast-back-end/projects/1)
+- A screenshot of the initial state of our kanban board can be found in [this issue](https://github.com/PolinaStamenova/ride-fast-back-end/issues/29)
+- Our team is made up of four people.
 
 ## Built With
 
