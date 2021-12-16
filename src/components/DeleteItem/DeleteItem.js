@@ -1,12 +1,11 @@
-/* eslint-disable jsx-quotes, comma-dangle, object-curly-newline,
- quotes, no-unused-vars, react/self-closing-comp, react/jsx-closing-tag-location,
- no-debugger */
+/* eslint-disable jsx-quotes,
+ quotes, react/self-closing-comp, react/jsx-closing-tag-location,
+ */
 
 import React, { useEffect, useState } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { getCars } from "../../services/carsService";
 import { removeCar } from "../../redux/cars/cars";
 import "./DeleteItem.css";
@@ -24,11 +23,10 @@ export default function DeleteItem() {
 
   const deleteCar = async () => {
     console.log(id);
-    const url = `https://ridefast.herokuapp.com/api/v1/cars/${id}`;
+    const url = `https://ridefast.herokuapp.com/api/v1/delete_car`;
     await fetch(url, {
-      method: "DELETE",
+      method: "POST",
       body: {
-        id,
         car_id: id,
       },
     })
@@ -36,6 +34,8 @@ export default function DeleteItem() {
         alert("polina");
         console.log(res);
         if (res.status === 201) {
+          alert("polina");
+
           dispatch(removeCar(id));
           history("/");
         }
