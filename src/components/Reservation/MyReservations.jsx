@@ -100,13 +100,6 @@ export default function MyReservations() {
             </thead>
             <tbody>{Reservations}</tbody>
           </Table>
-          <button
-            type='submit'
-            className='button-x-myreserv'
-            onClick={closePage}
-          >
-            Back
-          </button>
         </div>
       </div>
     </div>
