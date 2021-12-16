@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Reservation from './components/Reservation/Reservation';
 import Reserve from './components/Reserve/Reserve';
 import MyReservations from './components/Reservation/MyReservations';
+import DeleteItem from './components/DeleteItem/DeleteItem';
 
 const App = () => (
   <div className="app">
@@ -23,7 +24,7 @@ const App = () => (
         <Route exact path="/details" element={<Details />} />
         <Route exact path="/myreservations" element={<MyReservations />} />
         <Route exact path="/addItem" element={<AddItem />} />
-        {/* <Route exact path='/deleteItem' element={<DeleteItem />} /> */}
+        <Route exact path="/deleteItem" element={<DeleteItem />} />
         <Route exact path="/reserve" element={<Reservation />} />
         <Route exact path="/reserve/:id" element={<Reserve />} />
       </Routes>
