@@ -15,7 +15,7 @@ export default function DeleteItem() {
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.entities.reservation);
   const { list: cars } = useSelector((state) => state.entities.carrs);
-  const [id, setId] = useState("");
+  const [id, setId] = useState(0);
 
   const closePage = () => {
     history("/");
@@ -23,18 +23,20 @@ export default function DeleteItem() {
 
   const deleteCar = async () => {
     console.log(id);
-    const url = `https://ridefast.herokuapp.com/api/v1/delete_car`;
+    const url = 'https://ridefast.herokuapp.com/api/v1/delete_car';
+    const requestBody = JSON.stringify({ car_id: id });
     await fetch(url, {
       method: "POST",
-      body: {
-        car_id: id,
+      headers: {
+        'Content-Type': 'application/json',
       },
+      body: requestBody,
     })
       .then((res) => {
-        alert("polina");
+        alert("Are you sure you want to delete this car?");
         console.log(res);
-        if (res.status === 201) {
-          alert("polina");
+        if (res.status === 201 || res.status === 200) {
+          alert("Car Deleted");
 
           dispatch(removeCar(id));
           history("/");
@@ -47,7 +49,7 @@ export default function DeleteItem() {
 
   const handleChange = (e) => {
     console.log(e.target.value);
-    setId(e.target.value);
+    setId(Number(e.target.value));
   };
 
   const loadCars = async () => {
@@ -93,10 +95,11 @@ export default function DeleteItem() {
               Choose a car that you want to remove from the drop down menu. For
               more information, please contact us. Thank you for choosing us.
             </p>
-            <form className='select-book' onSubmit={deleteCar}>
+            <div className='select-book'>
               <div className='reserve-wrapper'>
                 <div className='select-city'>
                   <select onChange={handleChange}>
+                    <option>Select a car</option>
                     {cars.map((car) => (
                       <option key={car.id} value={car.id}>
                         {car.name}
@@ -106,11 +109,11 @@ export default function DeleteItem() {
                 </div>
               </div>
               <div className='book-btn'>
-                <button type='submit' className='btn'>
-                  Remove Car
+                <button type='button' className='btn' onClick={deleteCar}>
+                  Delete Car
                 </button>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       )}
