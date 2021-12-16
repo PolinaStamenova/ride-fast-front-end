@@ -19,15 +19,30 @@ h1 {
   color: #fff;
 }
 
+#close {
+  position: fixed;
+  right: 5%;
+}
+
 .add-item-form {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  /* padding: 0 3rem; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.button-x-myreserv {
+  margin-top: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .add-item-input,
@@ -67,9 +82,13 @@ h1 {
     width: 60%;
   }
 
+  .button-x-myreserv {
+    width: 60%;
+  }
+
   .add-item-input,
   .add-item-btn {
     padding: 0.7rem;
-    font-size: 20px;
+    font-size: 18px;
   }
 }

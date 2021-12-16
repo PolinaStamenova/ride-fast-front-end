@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import "./Reservation.css";
-import { FaSearch } from "react-icons/fa";
+import { GrClose } from "react-icons/gr";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -61,6 +61,9 @@ export default function Reservation() {
     });
   };
 
+  const closePage = () => {
+    history("/");
+  };
   const { city, startDate, endDate, car } = reservation;
 
   return (
@@ -74,12 +77,13 @@ export default function Reservation() {
               <HiMenuAlt4 />
             </div>
             <div className='search'>
-              <FaSearch
+              <GrClose
                 style={{
                   color: "#97bf11",
                   fontSize: "1.5rem",
-                  paddingLeft: "15px",
+                  paddingLeft: "10px",
                 }}
+                onClick={closePage}
               />
             </div>
           </header>
