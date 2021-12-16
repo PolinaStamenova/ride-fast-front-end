@@ -1,5 +1,3 @@
-/* eslint-disable jsx-quotes, quotes, comma-dangle */
-
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";

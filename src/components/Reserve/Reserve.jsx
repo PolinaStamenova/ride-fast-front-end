@@ -1,7 +1,5 @@
-/* eslint-disable quotes, jsx-quotes, comma-dangle */
-
 import React, { useEffect, useState } from "react";
-import { GrClose } from "react-icons/gr";
+import { FaSearch } from "react-icons/fa";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -73,11 +71,11 @@ export default function Reserve() {
               <HiMenuAlt4 />
             </div>
             <div className='search'>
-              <GrClose
+              <FaSearch
                 style={{
                   color: "#97bf11",
                   fontSize: "1.5rem",
-                  paddingLeft: "10px",
+                  paddingLeft: "15px",
                 }}
                 onClick={closePage}
               />
