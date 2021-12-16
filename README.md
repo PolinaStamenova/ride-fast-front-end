@@ -54,12 +54,12 @@ npm start
 👤 **Gift Uwhubetine**
 
 - GitHub: [@githubhandle](https://github.com/Ghiftee)
-- LinkedIn: [LinkedIn](XXXXXXXXXXXXXXXXXX)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/giftuwhubetine)
 
 👤 **Aganze Mataba Henri**
 
 - GitHub: [@githubhandle](https://github.com/hiromataba)
-- LinkedIn: [LinkedIn](XXXXXXXXXXXXXXXXXX)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hiro-mataba-1bb910209/)
 
 👤 **Polina Stamenova**
 
@@ -69,7 +69,7 @@ npm start
 👤 **Victor Otieno**
 
 - GitHub: [@githubhandle](https://github.com/vikitaotiz)
-- LinkedIn: [LinkedIn](XXXXXXXXXXXXXXXXXX)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/victor-otieno-oluoch/)
 
 ## 🤝 Contributing
 
