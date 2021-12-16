@@ -1,3 +1,5 @@
+/* eslint-disable jsx-quotes, quotes, comma-dangle, object-curly-newline */
+
 import React, { useEffect, useState } from "react";
 import "./Reservation.css";
 import { FaSearch } from "react-icons/fa";

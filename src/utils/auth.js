@@ -1,7 +1,7 @@
-import _ from "lodash";
-import axios from "axios";
+import _ from 'lodash';
+import axios from 'axios';
 
-import storage from "../services/storageService";
+import storage from '../services/storageService';
 
 export const updateToken = (token = null) => {
   if (_.isEmpty(token)) {
@@ -14,5 +14,5 @@ export const updateToken = (token = null) => {
 };
 
 export const whaterver = () => {
-  console.log("whatever");
+  console.log('whatever');
 };

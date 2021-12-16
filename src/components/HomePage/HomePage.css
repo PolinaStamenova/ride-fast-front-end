@@ -9,7 +9,7 @@
 
 .homepage {
   width: 100vw;
-  height: 100vh;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,8 +34,8 @@
   overflow-x: auto;
   flex-wrap: nowrap;
   scroll-behavior: smooth;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #mainDiv::-webkit-scrollbar {
