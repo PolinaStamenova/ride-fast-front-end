@@ -1,7 +1,6 @@
-/* eslint-disable react/jsx-key, jsx-quotes, quotes */
-
+/* eslint-disable react/jsx-key */
 const Icons = () => {
-  const altTags = Array(10).fill("fa fa-circle me-1");
+  const altTags = Array(10).fill('fa fa-circle me-1');
 
   return (
     <div>

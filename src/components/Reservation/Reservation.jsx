@@ -1,15 +1,13 @@
-/* eslint-disable camelcase, jsx-quotes, quotes, comma-dangle, object-curly-newline */
-
-import React, { useEffect, useState } from "react";
-import "./Reservation.css";
-import { GrClose } from "react-icons/gr";
-import { HiMenuAlt4 } from "react-icons/hi";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { getCars } from "../../services/carsService";
-import { createReservation } from "../../services/reservationService";
-import { getCities } from "../../services/citiesService";
-import storage from "../../services/storageService";
+import React, { useEffect, useState } from 'react';
+import './Reservation.css';
+import { GrClose } from 'react-icons/gr';
+import { HiMenuAlt4 } from 'react-icons/hi';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { getCars } from '../../services/carsService';
+import { createReservation } from '../../services/reservationService';
+import { getCities } from '../../services/citiesService';
+import storage from '../../services/storageService';
 
 export default function Reservation() {
   const history = useNavigate();
@@ -19,16 +17,16 @@ export default function Reservation() {
   const { list: cars } = useSelector((state) => state.entities.carrs);
   const { list: cities } = useSelector((state) => state.entities.cities);
   const [reservation, setReservation] = useState({
-    city: "",
-    car: "",
-    startDate: "",
-    endDate: "",
+    city: '',
+    car: '',
+    startDate: '',
+    endDate: '',
   });
   const loadCities = async () => {
     try {
       dispatch(getCities());
     } catch (error) {
-      console.log("Loading cities Error");
+      console.log('Loading cities Error');
     }
   };
   const handleChange = (e) => {
@@ -55,43 +53,45 @@ export default function Reservation() {
         city_id: reservation.city,
         start_date: reservation.startDate,
         end_date: reservation.endDate,
-      })
+      }),
     ).then(() => {
-      history("/");
+      history('/');
     });
   };
 
   const closePage = () => {
-    history("/");
+    history('/');
   };
 
-  const { city, startDate, endDate, car } = reservation;
+  const {
+    city, startDate, endDate, car,
+  } = reservation;
 
   return (
-    <div className='reg'>
+    <div className="reg">
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div>
-          <header className='header'>
-            <div className='hamburger'>
+          <header className="header">
+            <div className="hamburger">
               <HiMenuAlt4 />
             </div>
-            <div className='search'>
+            <div className="search">
               <GrClose
                 style={{
-                  color: "#97bf11",
-                  fontSize: "1.5rem",
-                  paddingLeft: "10px",
+                  color: '#97bf11',
+                  fontSize: '1.5rem',
+                  paddingLeft: '10px',
                 }}
                 onClick={closePage}
               />
             </div>
           </header>
-          <div className='containerr'>
-            <h1 className='reg-form-title'>BOOK A CAR TODAY TO RIDE WITH US</h1>
-            <div className='baar' />
-            <p className='description'>
+          <div className="containerr">
+            <h1 className="reg-form-title">BOOK A CAR TODAY TO RIDE WITH US</h1>
+            <div className="baar" />
+            <p className="description">
               Welcome to RideFast, the best car rental service in the world.
               Book a car today and enjoy your trip. In order to book a car, you
               must be logged in. Select your city, car, start date and end date.
@@ -99,28 +99,28 @@ export default function Reservation() {
               you. For more information, please contact us. Thank you for
               choosing us.
             </p>
-            <form className='select-book' onSubmit={handleSubmit}>
-              <div className='reserve-wrapper'>
-                <div className='reserve-date'>
-                  <label htmlFor='startDate'>
+            <form className="select-book" onSubmit={handleSubmit}>
+              <div className="reserve-wrapper">
+                <div className="reserve-date">
+                  <label htmlFor="startDate">
                     Start Date:
                     <input
-                      type='date'
-                      name='startDate'
-                      id='date'
+                      type="date"
+                      name="startDate"
+                      id="date"
                       value={startDate}
                       onChange={handleChange}
                       required
                     />
                   </label>
                 </div>
-                <div className='reserve-date'>
-                  <label htmlFor='endDate'>
+                <div className="reserve-date">
+                  <label htmlFor="endDate">
                     End Date:
                     <input
-                      type='date'
-                      name='endDate'
-                      id='date'
+                      type="date"
+                      name="endDate"
+                      id="date"
                       value={endDate}
                       onChange={handleChange}
                       required
@@ -128,9 +128,9 @@ export default function Reservation() {
                   </label>
                 </div>
               </div>
-              <div className='select-and-book'>
-                <div className='select-city'>
-                  <select name='city' value={city} onChange={handleChange}>
+              <div className="select-and-book">
+                <div className="select-city">
+                  <select name="city" value={city} onChange={handleChange}>
                     {cities.map((city) => (
                       <option key={city.id} value={city.id}>
                         {city.name}
@@ -138,8 +138,8 @@ export default function Reservation() {
                     ))}
                   </select>
                 </div>
-                <div className='select-city'>
-                  <select name='car' value={car} onChange={handleChange}>
+                <div className="select-city">
+                  <select name="car" value={car} onChange={handleChange}>
                     {cars.map((car) => (
                       <option key={car.id} value={car.id}>
                         {car.name}
@@ -148,8 +148,8 @@ export default function Reservation() {
                   </select>
                 </div>
               </div>
-              <div className='book-btn'>
-                <button type='submit' className='btn'>
+              <div className="book-btn">
+                <button type="submit" className="btn">
                   Book Now
                 </button>
               </div>
