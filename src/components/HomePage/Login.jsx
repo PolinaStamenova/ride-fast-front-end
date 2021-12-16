@@ -1,3 +1,5 @@
+/* eslint-disable camelcase, jsx-quotes, quotes */
+
 import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";

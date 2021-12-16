@@ -17,14 +17,16 @@
   cursor: pointer;
 }
 
-.my-reses-title {
-  font-size: 18px;
+#my-reses-title {
+  font-size: 38px;
 }
 
 #closeReservation {
   position: fixed;
   top: 2%;
   right: 5%;
+  height: 50px;
+  width: 50px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -35,7 +37,12 @@
     padding: 0;
   }
 
-  .my-reses-title {
-    font-size: 22px;
+  #my-reses-title {
+    font-size: 18px;
+  }
+
+  #closeReservation {
+    height: 30px;
+    width: 30px;
   }
 }

@@ -77,7 +77,9 @@ export default function MyReservations() {
     <div className='reg'>
       <div>
         <div className='containerrr'>
-          <h1 className='mt-4 my-reses-title'>MY RESERVATIONS</h1>
+          <h1 className='mt-4 ' id='my-reses-title'>
+            MY RESERVATIONS
+          </h1>
           <div className='search' id='closeReservation'>
             <GrClose
               style={{
