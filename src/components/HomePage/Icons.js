@@ -1,11 +1,8 @@
 /* eslint-disable react/jsx-key, jsx-quotes, quotes */
 
 const Icons = () => {
-  const altTags = [
-    "fa fa-circle me-1",
-    "fa fa-circle me-1",
-    "fa fa-circle me-1",
-  ];
+  const altTags = Array(10).fill("fa fa-circle me-1");
+
   return (
     <div>
       {altTags.map((tag) => (
