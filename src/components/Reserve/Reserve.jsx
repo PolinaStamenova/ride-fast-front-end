@@ -1,5 +1,3 @@
-/* eslint-disable quotes, jsx-quotes, comma-dangle */
-
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { HiMenuAlt4 } from "react-icons/hi";
@@ -58,6 +56,10 @@ export default function Reserve() {
 
   const { city, startDate, endDate } = reservation;
 
+  const closePage = () => {
+    history("/");
+  };
+
   return (
     <div className='reg'>
       {loading ? (
@@ -75,6 +77,7 @@ export default function Reserve() {
                   fontSize: "1.5rem",
                   paddingLeft: "15px",
                 }}
+                onClick={closePage}
               />
             </div>
           </header>

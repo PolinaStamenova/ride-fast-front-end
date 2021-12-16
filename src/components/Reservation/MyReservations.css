@@ -7,11 +7,35 @@
   justify-content: center;
 }
 
+.button-x-myreserv {
+  color: white;
+  font-size: 22px;
+  padding: 0.5rem;
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.my-reses-title {
+  font-size: 18px;
+}
+
+#closeReservation {
+  position: fixed;
+  top: 2%;
+  right: 5%;
+}
+
 @media only screen and (max-width: 768px) {
   .containerrr {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  .my-reses-title {
+    font-size: 22px;
   }
 }

@@ -1,24 +1,17 @@
 /*
   ==============================================
-               ****** RESET *****
-  ==============================================
-*/
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/*
-  ==============================================
                ****** GLOBAL *****
   ==============================================
 */
+* {
+  box-sizing: border-box;
+}
 
 .add-form {
-  padding-top: 20vh;
+  padding-top: 10vh;
   background-color: #97bf11;
   height: 100vh;
+  width: 100vw;
   text-align: center;
 }
 
@@ -26,12 +19,30 @@ h1 {
   color: #fff;
 }
 
+#close {
+  position: fixed;
+  right: 5%;
+}
+
 .add-item-form {
-  margin-top: 4rem;
-  padding: 0 3rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.button-x-myreserv {
+  margin-top: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .add-item-input,
@@ -68,12 +79,16 @@ h1 {
 
 @media only screen and (min-width: 768px) {
   .add-item-form {
-    padding: 0 700px;
+    width: 60%;
+  }
+
+  .button-x-myreserv {
+    width: 60%;
   }
 
   .add-item-input,
   .add-item-btn {
     padding: 0.7rem;
-    font-size: 20px;
+    font-size: 18px;
   }
 }

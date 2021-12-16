@@ -1,12 +1,14 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/extensions */
-/* eslint-disable import/prefer-default-export */
-// import _ from 'lodash';
 import { toast } from 'react-toastify';
 import {
-  reservationFailure, setReservation, reservationCreated, reservationRequest,
+  reservationFailure,
+  setReservation,
+  reservationCreated,
+  reservationRequest,
 } from '../redux/slices/reservation';
-import { getReservationsAsync, createReservationAsync } from '../api/reservations';
+import {
+  getReservationsAsync,
+  createReservationAsync,
+} from '../api/reservations';
 
 export const getReservation = () => async (dispatch) => {
   dispatch(reservationRequest());
@@ -14,13 +16,16 @@ export const getReservation = () => async (dispatch) => {
     const reservation = await getReservationsAsync();
     dispatch(setReservation(reservation.data));
   } catch (error) {
-    dispatch(reservationFailure(error.response ? error.response.data.message : error.message));
+    dispatch(
+      reservationFailure(
+        error.response ? error.response.data.message : error.message,
+      ),
+    );
     toast.error(error.response ? error.response.data.message : error.message);
   }
 };
 
 export const createReservation = (reservation) => async (dispatch) => {
-  console.log(reservation);
   dispatch(reservationRequest());
   try {
     const response = await createReservationAsync(reservation);
@@ -28,7 +33,11 @@ export const createReservation = (reservation) => async (dispatch) => {
     toast.success('Reservation created successfully');
     return response.data;
   } catch (error) {
-    dispatch(reservationFailure(error.response ? error.response.data.message : error.message));
+    dispatch(
+      reservationFailure(
+        error.response ? error.response.data.message : error.message,
+      ),
+    );
     toast.error(error.response ? error.response.data.message : error.message);
   }
   return null;
