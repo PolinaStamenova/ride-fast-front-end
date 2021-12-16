@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
-import { HiMenuAlt4 } from "react-icons/hi";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useLocation } from "react-router-dom";
-import { createReservation } from "../../services/reservationService";
-import { getCities } from "../../services/citiesService";
-import storage from "../../services/storageService";
-import "../Reservation/Reservation.css";
-import "./Reserve.css";
+import React, { useEffect, useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
+import { HiMenuAlt4 } from 'react-icons/hi';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { createReservation } from '../../services/reservationService';
+import { getCities } from '../../services/citiesService';
+import storage from '../../services/storageService';
+import '../Reservation/Reservation.css';
+import './Reserve.css';
 
 export default function Reserve() {
   const location = useLocation();
@@ -19,16 +19,16 @@ export default function Reserve() {
   const currentUser = storage.getAuthToken();
   const { list: cities } = useSelector((state) => state.entities.cities);
   const [reservation, setReservation] = useState({
-    city: "",
+    city: '',
     car: id,
-    startDate: "",
-    endDate: "",
+    startDate: '',
+    endDate: '',
   });
   const loadCities = async () => {
     try {
       dispatch(getCities());
     } catch (error) {
-      console.log("Loading cities Error");
+      console.log('Loading cities Error');
     }
   };
   const handleChange = (e) => {
@@ -48,40 +48,40 @@ export default function Reserve() {
         city_id: reservation.city,
         start_date: reservation.startDate,
         end_date: reservation.endDate,
-      })
+      }),
     ).then(() => {
-      history("/");
+      history('/');
     });
   };
 
   const { city, startDate, endDate } = reservation;
 
   return (
-    <div className='reg'>
+    <div className="reg">
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div>
-          <header className='header'>
-            <div className='hamburger'>
+          <header className="header">
+            <div className="hamburger">
               <HiMenuAlt4 />
             </div>
-            <div className='search'>
+            <div className="search">
               <FaSearch
                 style={{
-                  color: "#97bf11",
-                  fontSize: "1.5rem",
-                  paddingLeft: "15px",
+                  color: '#97bf11',
+                  fontSize: '1.5rem',
+                  paddingLeft: '15px',
                 }}
               />
             </div>
           </header>
-          <div className='containerr'>
-            <h1 className='reg-form-title'>
+          <div className="containerr">
+            <h1 className="reg-form-title">
               {`Book ${name} TODAY TO RIDE WITH US`}
             </h1>
-            <div className='baar' />
-            <p className='description'>
+            <div className="baar" />
+            <p className="description">
               Welcome to FastRide, the best car rental service in the world.
               Book a car today and enjoy your trip. in order to book a car, you
               must be logged in. select your city, car, start date and end date.
@@ -89,28 +89,28 @@ export default function Reserve() {
               you. For more information, please contact us. Thank you for
               choosing us.
             </p>
-            <form className='select-book' onSubmit={handleSubmit}>
-              <div className='reserve-wrapper'>
-                <div className='reserve-date'>
-                  <label htmlFor='startDate'>
+            <form className="select-book" onSubmit={handleSubmit}>
+              <div className="reserve-wrapper">
+                <div className="reserve-date">
+                  <label htmlFor="startDate">
                     Start Date:
                     <input
-                      type='date'
-                      name='startDate'
-                      id='date'
+                      type="date"
+                      name="startDate"
+                      id="date"
                       value={startDate}
                       onChange={handleChange}
                       required
                     />
                   </label>
                 </div>
-                <div className='reserve-date'>
-                  <label htmlFor='endDate'>
+                <div className="reserve-date">
+                  <label htmlFor="endDate">
                     End Date:
                     <input
-                      type='date'
-                      name='endDate'
-                      id='date'
+                      type="date"
+                      name="endDate"
+                      id="date"
                       value={endDate}
                       onChange={handleChange}
                       required
@@ -118,9 +118,9 @@ export default function Reserve() {
                   </label>
                 </div>
               </div>
-              <div className='select-city-and-book'>
-                <div className='select-city-drop-down'>
-                  <select name='city' value={city} onChange={handleChange}>
+              <div className="select-city-and-book">
+                <div className="select-city-drop-down">
+                  <select name="city" value={city} onChange={handleChange}>
                     {cities.map((city) => (
                       <option key={city.id} value={city.id}>
                         {city.name}
@@ -129,8 +129,8 @@ export default function Reserve() {
                   </select>
                 </div>
               </div>
-              <div className='book-btn'>
-                <button type='submit' className='btn'>
+              <div className="book-btn">
+                <button type="submit" className="btn">
                   Book Now
                 </button>
               </div>
