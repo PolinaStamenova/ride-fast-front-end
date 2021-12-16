@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 /* eslint-disable no-return-await */
 import http from '../services/httpService';
 import { BASE_URL } from '../utils/constants';

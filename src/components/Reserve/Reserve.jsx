@@ -1,5 +1,3 @@
-/* eslint-disable quotes, jsx-quotes, comma-dangle */
-
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { HiMenuAlt4 } from "react-icons/hi";
