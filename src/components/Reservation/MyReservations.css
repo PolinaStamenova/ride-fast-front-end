@@ -17,6 +17,10 @@
   cursor: pointer;
 }
 
+.my-reses-title {
+  font-size: 18px;
+}
+
 #closeReservation {
   position: fixed;
   top: 2%;
@@ -29,5 +33,9 @@
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  .my-reses-title {
+    font-size: 22px;
   }
 }
