@@ -4,6 +4,8 @@
 
 ![Screenshot](src/screenshot.png)
 
+![Live Link](https://ride-fast-app.netlify.app/)
+
 ## Project Decription
 
 - Ride fast is built in two different apps with React and Redux for the front end and Ruby on Rails for the backend API. To use the app, a user logs in and is given access to the available cars. They have the options to add, delete and reserve a car.
