@@ -51,7 +51,6 @@
 }
 
 .box input[type="email"]:focus {
-  width: 280px;
   border-color: #2ecc71;
 }
 
